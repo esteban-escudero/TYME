@@ -9,7 +9,7 @@ services:
       - ./frontend:/app
       - /app/node_modules
     working_dir: /app
-    command: npm run dev
+    command: npm run dev -- --host
     depends_on:
       - backend
 
@@ -31,13 +31,14 @@ services:
     image: postgres:15
     restart: always
     ports:
-      - '5433:5432'
-    volumes:
-      - pgdata:/var/lib/postgresql/data
+      - '5432:5432'
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 112002
       POSTGRES_DB: tymedb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
 volumes:
   pgdata:
