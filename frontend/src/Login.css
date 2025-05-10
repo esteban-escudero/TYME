@@ -1,0 +1,150 @@
+/* Establece el alto completo y elimina márgenes/paddings por defecto en html, body y #root */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Define la fuente predeterminada y el color de fondo del cuerpo de la página */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Contenedor principal: organiza el logo y el formulario en columnas y ocupa toda la pantalla */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: #d2d2d2;
+}
+
+/* Contenedor del logo: centra vertical y horizontalmente la imagen y ocupa la mitad del ancho */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 30px;
+    background-color: #d2d2d2;
+}
+
+/* Tamaño de la imagen del logo */
+.login-logo {
+    width: 500px;
+}
+
+/* Contenedor del formulario: lo centra verticalmente y lo limita al 50% del ancho */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 30px;
+}
+
+/* Título del formulario (Inicio de sesión o Registro) con estilo azul y sombra blanca */
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #87ceeb;
+    text-align: center;
+    font-size: 48px;
+
+    /* Sombra para dar un borde blanco al texto */
+    text-shadow:
+      -1px -1px 0 #ffffff,
+       1px -1px 0 #ffffff,
+      -1px  1px 0 #ffffff,
+       1px  1px 0 #ffffff;
+}
+
+/* Grupo que envuelve cada etiqueta e input */
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilo para etiquetas de los inputs */
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #87ceeb;
+    font-weight: bold;
+    font-size: 14px;
+
+    /* Sombra para mayor legibilidad del texto */
+    text-shadow:
+      -1px -1px 0 #ffffff,
+       1px -1px 0 #ffffff,
+      -1px  1px 0 #ffffff,
+       1px  1px 0 #ffffff;
+}
+
+/* Estilo de los inputs de texto y contraseña */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Color del texto dentro del placeholder del input */
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+/* Contenedor que agrupa el checkbox "Recordar" y el link "Olvidé mi contraseña" */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Estilo para la sección de "Recordar" */
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+/* Espacio entre el checkbox y el texto "Recordar" */
+.remember-me input {
+    margin-right: 5px;
+}
+
+/* Estilo del enlace "Olvidé mi contraseña" */
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Subraya el enlace al pasar el cursor */
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Estilo general para los botones */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+}
+
+/* Cambia el color del botón cuando el cursor pasa sobre él */
+button:hover {
+    background-color: #0056b3;
+}
